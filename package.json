@@ -1,0 +1,64 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "base-node-backend",
+  "version": "0.0.1",
+  "description": "basic backend setup using node",
+  "author": "zack kourouma <zack@kourouma.me>",
+  "main": "public/server.js",
+  "scripts": {
+    "watch-server": "nodemon",
+    "transpile": "tsc --pretty",
+    "start": "node ./public/server.js",
+    "build": "npm run transpile"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ignore": [
+      "node_modules",
+      ".git",
+      "src/**/*.test.ts"
+    ],
+    "ext": "ts",
+    "verbose": true,
+    "exec": "node -r ts-node/register ./src/server.ts",
+    "delay": "2500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zkourouma/base-node-backend.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "koa"
+  ],
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "knex": "^0.21.1",
+    "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
+    "sqlite3": "^4.1.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__router": "^8.0.2",
+    "@types/sqlite3": "^3.1.6",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
