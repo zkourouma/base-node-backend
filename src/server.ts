@@ -1,5 +1,7 @@
 import * as Koa from 'koa';
 import * as bodyparser from 'koa-bodyparser';
+import * as cors from '@koa/cors';
+
 import * as http from 'http';
 
 import * as conn from './storage';
@@ -9,9 +11,12 @@ import api from './api';
 const SERVER_PORT = 8000;
 
 const app = new Koa();
+
+app.use(cors());
 app.use(bodyparser());
 
 conn.initDB();
+
 app.use(api.routes()).use(api.allowedMethods());
 
 const server = http.createServer(app.callback());
