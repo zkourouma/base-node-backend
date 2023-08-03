@@ -71,7 +71,7 @@ packages:
       koa-compose: 4.1.0
       methods: 1.1.2
       path-to-regexp: 1.8.0
-      urijs: 1.19.2
+      urijs: 1.19.11
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1334,8 +1334,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /urijs@1.19.2:
-    resolution: {integrity: sha512-s/UIq9ap4JPZ7H1EB5ULo/aOUbWqfDi7FKzMC2Nz+0Si8GiT1rIEaprt8hy3Vy2Ex2aJPpOQv4P4DuOZ+K1c6w==}
+  /urijs@1.19.11:
+    resolution: {integrity: sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ==}
     dev: false
 
   /util-deprecate@1.0.2:
