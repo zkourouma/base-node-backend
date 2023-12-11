@@ -43,7 +43,7 @@
     "koa"
   ],
   "dependencies": {
-    "@koa/cors": "^3.1.0",
+    "@koa/cors": "^5.0.0",
     "@koa/router": "^8.0.8",
     "knex": "^2.4.0",
     "koa": "^2.12.0",
